@@ -12,9 +12,23 @@
 </head>
 <style>
   body {
-
-    background: #d1d5db;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    background: linear-gradient(-45deg, #FF0080, #0080FF);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
   }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
   .height {
 
@@ -71,25 +85,21 @@
     padding-left: 10px;
     float: left;
     width: 50%;
-    background-color:yellow;
 
   }
 
   .column2 {
     float: left;
     width: 10%;
-    background-color:yellow;
   }
 
   .column3 {
     float: left;
     width: 40%;
-    background-color:yellow;
   }
 
   .row1 {
     margin: 0 50px 0 50px;
-    background: blue;
   }
   .row2 {
     margin: 0 50px 0 50px;
@@ -97,6 +107,17 @@
 
   .button{
     align-items: center;
+  }
+
+  .songlist{
+    border: #f7cd10;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(45deg, #f771b4, #6fb6fd);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
   }
 
   /* Clear floats after the columns */
@@ -115,7 +136,7 @@
             <button type="submit" class="btn btn-info">Submit</button>
         </form>
       </div>
-      <div>
+      <div class="songlist">
         <div class="row1">
           <div class="column1">
             <h4>NAME</h4>
