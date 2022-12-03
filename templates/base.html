@@ -15,7 +15,7 @@
 </head>
 <body>
   <div class="title">
-    Mu<h1>z</h1>ingle
+    <a href="/">Mu<h1>z</h1>ingle</a> 
   </div>
   <div class="container">
     <br>
@@ -23,15 +23,15 @@
     <div class="row height d-flex justify-content-center align-items-center">
       <div class="col-md-6">
         <form action="/" method="POST">
-            <input type="text" class="form-control form-input" placeholder="Name of song ..." name="song" id="song">
+            <input type="text" class="form-control form-input" placeholder="Name of song ..." name="song" id="song" required>
             <br>
-            <input type="text" class="form-control form-input" placeholder="Year" name="year" id="year">
+            <input type="text" class="form-control form-input" placeholder="Year" name="year" id="year" required>
             <br>
             <button type="submit" class="btn btn-info">Submit</button>
         </form>
       </div>
-    {% for j in song1 %}
-      {% for key in j.name if loop.first %}
+    
+{% if song1 %}
       <div class="songlist">
         <div class="row1">
           <div class="column1">
@@ -57,11 +57,10 @@
             {{i.artists}}
           </div>
           {%endfor%}
-          
+    {%endif%}
         </div>
       </div>
-      {%endfor%}
-    {%endfor%}
+ 
     </div>
 
   </div>

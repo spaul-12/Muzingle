@@ -10,8 +10,12 @@ def home():
         song = request.form['song']
         year = request.form['year']
         year=int(year)
-        song1 = recommender_system.recommender([{'name':song, 'year': year}])
-        return render_template('base.html',song1=song1,year=year)
+        try:
+            song1 = recommender_system.recommender([{'name':song, 'year': year}])
+            return render_template('base.html',song1=song1)
+        except:
+            print("Something went wrong")
+            return render_template('base1.html')
     else:
         return render_template('base.html')
  

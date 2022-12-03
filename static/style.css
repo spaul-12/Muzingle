@@ -111,7 +111,7 @@ body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   }
-  .title{
+  .title a{
     margin-top: 20px;
     color: #ffffff;
     margin-left: 20px;
