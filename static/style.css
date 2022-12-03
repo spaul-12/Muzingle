@@ -1,0 +1,125 @@
+body {
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    background: linear-gradient(-45deg, #FF0080, #0080FF);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+  .height {
+
+    height: 80vh;
+  }
+
+  .form {
+
+    position: relative;
+  }
+
+  .form .fa-search {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #9ca3af;
+
+  }
+
+  .form span {
+
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+  }
+
+  .left-pan {
+    padding-left: 7px;
+  }
+
+  .left-pan i {
+
+    padding-left: 10px;
+  }
+
+  .form-input {
+
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+  }
+
+  .form-input:focus {
+
+    box-shadow: none;
+    border: none;
+  }
+ 
+  button{
+    display: block;
+    float: right;
+    
+  }
+  .column1 {
+    padding-left: 10px;
+    float: left;
+    width: 50%;
+
+  }
+
+  .column2 {
+    float: left;
+    width: 10%;
+  }
+
+  .column3 {
+    float: left;
+    width: 40%;
+  }
+
+  .row1 {
+    margin: 0 50px 0 50px;
+  }
+  .row2 {
+    margin: 0 50px 0 50px;
+  }
+
+  .button{
+    align-items: center;
+  }
+
+  .songlist{
+    border: #f7cd10;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(45deg, #f771b4, #6fb6fd);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  .title a{
+    margin-top: 20px;
+    color: #ffffff;
+    margin-left: 20px;
+    font-family: 'Kaushan Script', serif;
+    font-size: 30px;
+    text-shadow: 4px 4px 4px rgb(255, 4, 155);
+    display: flex;
+  }
+  h1{
+    color: aqua;
+  }
