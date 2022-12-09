@@ -13,9 +13,10 @@
   <link rel="stylesheet" href="static/style.css">
   <title>Muzingle</title>
 </head>
+
 <body>
   <div class="title">
-    <a href="/">Mu<h1>z</h1>ingle</a> 
+    <a href="/">Mu<h1>z</h1>ingle</a>
   </div>
   <div class="container">
     <br>
@@ -23,44 +24,33 @@
     <div class="row height d-flex justify-content-center align-items-center">
       <div class="col-md-6">
         <form action="/" method="POST">
-            <input type="text" class="form-control form-input" placeholder="Name of song ..." name="song" id="song" required>
-            <br>
-            <input type="text" class="form-control form-input" placeholder="Year" name="year" id="year" required>
-            <br>
-            <button type="submit" class="btn btn-info">Submit</button>
+          <input type="text" class="form-control form-input" placeholder="Name of song ..." name="song" id="song"
+            required>
+          <br>
+          <input type="number" class="form-control form-input" placeholder="Year" name="year" id="year" required>
+          <br>
+          <button type="submit" class="btn btn-info">Submit</button>
         </form>
       </div>
-    
-{% if song1 %}
-      <div class="songlist">
-        <div class="row1">
-          <div class="column1">
-            <h4>NAME</h4>
-          </div>
-          <div class="column2">
-            <h4>YEAR</h4>
-          </div>
-          <div class="column3">
-            <h4>ARTISTS</h4>
-          </div>
 
-        </div>
+      {% if song1 %}
+      <div class="songlist">
         <div class="row2">
           {%for i in song1%}
           <div class="column1">
-            {{i.name}}
-          </div>
-          <div class="column2">
-            {{i.year}}
-          </div>
-          <div class="column3">
-            {{i.artists}}
+            <div class="card h-200">
+              {{i.year}}
+              <h6><b>{{i.name}}</b></h6>
+              <p> {{i.artists}}</p>
+            </div>
           </div>
           {%endfor%}
-    {%endif%}
+
+
+          {%endif%}
         </div>
       </div>
- 
+
     </div>
 
   </div>
